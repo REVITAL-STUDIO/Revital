@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@200;300;400;500;600;700;800;900&display=swap');
+
+.service-slide {
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -1px;
+}
+
+.slide-container {
+    width: 100%;
+    height: fit-content;
+}
+
+.vector-container {
+    position: relative;
+    float: right;
+    resize: both;
+}
+
+.vector3 {
+    width: 300px;
+    height: 800px;
+    filter: drop-shadow(0 4px 4px black);
+    resize: both;
+}
+
+.services {
+    color: #fff;
+    height: 800px;
+    top: 250px;
+    display: flex;
+    align-items: center;
+}
+.services span {
+    animation: rotateServices 14s linear infinite 0s;
+    position: absolute;
+    white-space: nowrap;
+    opacity: 0;
+    overflow: hidden;
+    font-size: 65px;
+    font-family: 'Epilogue';
+    text-transform: uppercase;
+    margin-left: 3rem;
+}
+
+
+/* Animations */
+
+@keyframes rotateServices {
+    0% {
+      opacity: 1;
+      width:0%
+    }
+  
+    14% {
+      opacity: 1;
+      width: 80%;
+    }
+  
+    14.2% {
+      opacity: 0;
+      width: 0%;
+    }
+  }
+
+  .services span:nth-child(2) {
+    animation-delay: 2s;
+  }
+  
+  .services span:nth-child(3) {
+    animation-delay: 4s;
+  }
+  
+  .services span:nth-child(4) {
+    animation-delay: 6s;
+  }
+  
+  .services span:nth-child(5) {
+    animation-delay: 8s;
+  }
+  
+  .services span:nth-child(6) {
+    animation-delay: 10s;
+  }
+  
+  .services span:nth-child(7) {
+    animation-delay: 12s;
+  }
+  
+  .services span:nth-child(8) {
+    animation-delay: 14s;
+  }
+  
+  .services span:nth-child(9) {
+    animation-delay: 16s;
+  }

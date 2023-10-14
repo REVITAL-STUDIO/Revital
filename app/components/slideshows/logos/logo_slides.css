@@ -1,0 +1,303 @@
+/* Styles */
+.logo-slide {
+    height: 100vh;
+    width: auto;
+    background-size: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -1px;
+    position: relative;
+}
+
+.auto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
+.mySlides {
+    position: absolute;
+    width: 650px;
+    filter: drop-shadow(0 4px 4px rgb(0, 0, 0));
+}
+.motto {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+    animation-delay: 1.5s;
+}
+
+.ideas {
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 400;
+    filter: drop-shadow(0 4px 4px rgb(10, 10, 10));
+    color: #ffffff;
+    background: linear-gradient(to right, #4d4d4d 0, white 10%, #4d4d4d 20%);
+    background-position: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 4s infinite linear;
+    animation-fill-mode: forwards;
+    -webkit-text-size-adjust: none;
+    text-decoration: none;
+    white-space: nowrap;
+    width: auto;
+    height: auto;
+    font-size: 1.5rem;
+}
+.sign {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 2;
+    font-family: 'Epilogue', sans-serif;
+    text-transform: uppercase;
+    font-size: 6em;
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #EB8771,
+      -0.2rem 0.1rem 1rem #6a3d33, 0.2rem 0.1rem 1rem #EB8771,
+      0 -0.5rem 2rem #af796d, 0 0.5rem 3rem #c0644f;
+    animation: glow 2s forwards, flicker 3s infinite;
+}
+
+.flicker {
+    animation: glow 2s forwards, blink 3s 2s infinite;
+
+    overflow: visible;
+}
+.fast-flicker {
+    animation: glow 2s forwards, blink 10s 1s infinite;
+    overflow: visible;
+  }
+.motto-items {
+    margin: 1rem 0;
+}
+
+
+.font-100 {
+    font-size: 100px;
+}
+
+.hidden {
+    display: none !important;
+  }
+
+
+  
+
+
+
+
+
+
+/* Animations */
+  @keyframes glow {
+    0% {
+      color: #000000;
+      text-shadow: none;
+    }
+    100% {
+      color: #ffe6ff;
+      text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #EB8771,
+      -0.2rem 0.1rem 1rem #6a3d33, 0.2rem 0.1rem 1rem #EB8771,
+      0 -0.5rem 2rem #af796d, 0 0.5rem 3rem #c0644f;
+    }
+  }
+
+  @keyframes blink {
+    0%,
+      22%,
+      36%,
+      75% {
+      color: #ffe6ff;
+      text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #EB8771,
+        -0.2rem 0.1rem 1rem #6a3d33, 0.2rem 0.1rem 1rem #EB8771,
+        0 -0.5rem 2rem #af796d, 0 0.5rem 3rem #c0644f;
+    }
+  
+    28%,
+      33% {
+      color: #EB8771;
+      text-shadow: none;
+    }
+  
+    82%,
+      97% {
+      color: #EB8771;
+      text-shadow: none;
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      transform: translate3d(0,40px,0)
+    }
+  
+    to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+    }
+  }
+
+  @keyframes shine{
+    0%{
+      background-position: 0
+    }
+  
+    60%{
+      background-position: 400px
+    }
+  
+    100%{
+      background-position: 800px
+    }
+  }
+  
+  @keyframes flicker {
+    from {
+      opacity: 1;
+    }
+  
+    4% {
+      opacity: 0.9;
+    }
+  
+    6% {
+      opacity: 0.85;
+    }
+  
+    8% {
+      opacity: 0.95;
+    }
+  
+    10% {
+      opacity: 0.9;
+    }
+  
+    11% {
+      opacity: 0.922;
+    }
+  
+    12% {
+      opacity: 0.9;
+    }
+  
+    14% {
+      opacity: 0.95;
+    }
+  
+    16% {
+      opacity: 0.98;
+    }
+  
+    17% {
+      opacity: 0.9;
+    }
+  
+    19% {
+      opacity: 0.93;
+    }
+  
+    20% {
+      opacity: 0.99;
+    }
+  
+    24% {
+      opacity: 1;
+    }
+  
+    26% {
+      opacity: 0.94;
+    }
+  
+    28% {
+      opacity: 0.98;
+    }
+  
+    37% {
+      opacity: 0.93;
+    }
+  
+    38% {
+      opacity: 0.5;
+    }
+  
+    39% {
+      opacity: 0.96;
+    }
+  
+    42% {
+      opacity: 1;
+    }
+  
+    44% {
+      opacity: 0.97;
+    }
+  
+    46% {
+      opacity: 0.94;
+    }
+  
+    56% {
+      opacity: 0.9;
+    }
+  
+    58% {
+      opacity: 0.9;
+    }
+  
+    60% {
+      opacity: 0.99;
+    }
+  
+    68% {
+      opacity: 1;
+    }
+  
+    70% {
+      opacity: 0.9;
+    }
+  
+    72% {
+      opacity: 0.95;
+    }
+  
+    93% {
+      opacity: 0.93;
+    }
+  
+    95% {
+      opacity: 0.95;
+    }
+  
+    97% {
+      opacity: 0.93;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }

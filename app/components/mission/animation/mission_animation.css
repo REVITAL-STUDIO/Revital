@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@200;300;400;500;600;700;800;900&display=swap');
+
+.mission-statement {
+    background-color: black;
+    height: 100vh;
+    margin-bottom: -1px;
+}
+
+.mission-statement p {
+    color: white;
+    position: relative;
+    font-size: 32px;
+    top: 25px;
+    font-family: 'Epilogue';
+    line-height: 33px;
+    /* opacity: 0; */
+    text-transform: uppercase;
+    text-align: center;
+    filter: drop-shadow(0 4px 4px rgba(125, 125, 125, 0.488));
+    animation-delay: 1s;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+  }
+
+.state-container {
+    height: 100%;
+    width: auto;
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.highlight {
+    color:#b9892f;
+     font-weight: 500;
+}
+
+.vector, .mission-statement p {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.vector {
+    position: relative;
+    width: 100%;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    /* opacity: 0; */
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
