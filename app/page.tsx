@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main>
       <div>
-        <MissionStatement />
+        <Navbar />
       </div>
     </main>
   )
