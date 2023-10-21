@@ -3,34 +3,30 @@
 .service-slide {
     height: 100vh;
     background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-bottom: -1px;
 }
 
 .slide-container {
     width: 100%;
+    display: flex;
     height: fit-content;
 }
 
 .vector-container {
-    position: relative;
-    float: right;
+    width: 50%;
+    height: 100vh;
     resize: both;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.vector3 {
-    width: 300px;
-    height: 800px;
-    filter: drop-shadow(0 4px 4px black);
-    resize: both;
-}
+
 
 .services {
     color: #fff;
-    height: 800px;
-    top: 250px;
+    width: 50%;
+    height: 100vh;
     display: flex;
     align-items: center;
 }
@@ -43,8 +39,9 @@
     font-size: 65px;
     font-family: 'Epilogue';
     text-transform: uppercase;
-    margin-left: 3rem;
+    margin-left: 1rem;
 }
+
 
 
 /* Animations */

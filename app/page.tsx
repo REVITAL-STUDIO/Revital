@@ -12,6 +12,11 @@ export default function Home() {
     <main>
       <div>
         <Navbar />
+        <LogoSlide/>
+        <MissionAnimation/>
+        <MissionStatement/>
+        <ServiceSlide/>
+    
       </div>
     </main>
   )
