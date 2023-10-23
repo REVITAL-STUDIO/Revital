@@ -14,7 +14,7 @@ const Navbar = () => {
     };
 
     return (
-        <div className="flex flex-row items-center justify-between  bg-black h-[80px] w-full">
+        <div className="flex flex-row items-center justify-between  bg-black h-[80px] fixed w-full z-50">
             <div className='ml-2'>
                 <Logo />
             </div>

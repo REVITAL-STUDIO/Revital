@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@200;300;400;500;600;700;800;900&display=swap');
 
 .brand {
-    height: 50vh;
+    height: 65vh;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.635), #000000 30% );
     margin-bottom: -1px;
 }
 
 .brand-container {
     width: 300px;
-    height: 75vh;
+    height: 65vh;
     margin: 0rem auto;
     display: flex;
     justify-content: center;
@@ -41,21 +41,20 @@
 }
 
 
-/* Animations */
-@keyframes scroll {
+  @keyframes scroll {
     0%, 20% {
       transform: translateY(0);
     }
-    25%,45% {
-      transform: translateY(-65px);
+    25%, 45% {
+      transform: translateY(-120px);
     }
-    50%,70% {
-      transform: translateY(-150px);
+    50%, 70% {
+      transform: translateY(-240px);
     }
-    75%,95% {
-      transform: translateY(-245px);
+    75%, 95% {
+      transform: translateY(-360px);
     }
     100% {
-      transform: translateY(-300px);
+      transform: translateY(-480px);
     }
-  }
+}

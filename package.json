@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@ionic/react": "^7.5.0",
+    "antd": "^5.10.2",
     "aos": "^3.0.0-beta.6",
     "next": "13.5.4",
     "react": "^18",

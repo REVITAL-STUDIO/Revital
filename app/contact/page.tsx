@@ -9,7 +9,7 @@ const Contact = () => {
 
     return (
         <div>
-        <section className="revital h-">
+        <section className="revital ">
       <div className="info">
         <p className="product">
           Your brand, product, idea is worth chasing. Believing in the
