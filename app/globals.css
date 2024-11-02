@@ -1,54 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@200;300;400;500;600;700;800;900&display=swap');
-
-
-:root {
-  --foreground-rgb: 255, 255, 255;
-  --background-rgb: 0, 0, 0;
-}
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
-
-html, body {
-  height: 100%;
-  width: 100%;
-}
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@200;300;400;500;600;700;800;900&display=swap");
 
 body {
-  color: black;
-  background: white;
-}
-
-
-
-
-::-webkit-scrollbar {
-  width: 5px;
-    background-color: black;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  display: none;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: transparent;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #EB8771;
-  border-radius: 20px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  margin: 0px;
+  background-color: #E9E0DB;
 }

@@ -1,27 +1,27 @@
-import Image from 'next/image'
+"use client";
+import Image from "next/image";
 import "./globals.css";
-import LogoSlide from './components/slideshows/logos/LogoSlide'
-import Navbar from './components/navbar/Navbar'
-import MissionAnimation from './components/mission/animation/MissionAnimation'
-import MissionStatement from './components/mission/statement/MissionStatement'
-import ServiceSlide from './components/slideshows/services/ServiceSlide'
-import ThemesSlide from './components/slideshows/themes/ThemesSlide'
-import Footer from './components/footer/Footer'
-import NewsSlide from './components/slideshows/news/NewsSlide'
-import Player from './components/player/Player'
+import Navbar from "./components/navbar/Navbar";
+
+import Statement from "./components/slideshows/slideshows/Statement";
+import { useEffect } from "react";
+import MenuSlider from "./components/slideshows/menuSlider/menuSlider";
+import MissionStatement from "./components/mission/statement/MissionStatement";
+import MissionAnimation from "./components/mission/animation/MissionAnimation";
 export default function Home() {
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
+    })();
+  }, []);
+
   return (
     <main>
-      <div >
-        <Navbar/>
-        <LogoSlide/>
-        <MissionAnimation/>
-        <MissionStatement/>
-        <ServiceSlide/>
-        <NewsSlide/>
-        <ThemesSlide/>
-        <Footer/>
-      </div>
+      <Navbar />
+      <Statement />
+      <MenuSlider />
+      <MissionAnimation />
     </main>
-  )
+  );
 }

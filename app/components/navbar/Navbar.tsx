@@ -1,28 +1,25 @@
-"use client"
+"use client";
+import Link from "next/link";
+import "./navbar.css";
+import Image from "next/image";
 
-import Logo from './Logo';
-import './navbar.css';
-import Menu from './menu/Menu';
-import {
-    useState
-} from 'react';
 const Navbar = () => {
-    const [isChecked, setIsChecked] = useState(false);
-
-    const handleCheckboxChange = () => {
-        setIsChecked(!isChecked);
-    };
-
-    return (
-        <div className="flex flex-row items-center justify-between  bg-black h-[80px] fixed w-full z-50">
-            <div className='ml-2'>
-                <Logo />
-            </div>
-            <input type="checkbox" id="active" onChange={handleCheckboxChange} />
-            <label htmlFor="active" className="menu-btn">{isChecked ? "Close" : "Menu"}</label>
-            <Menu />
-        </div>
-    )
-}
+  return (
+    <section className="navbar">
+      <Link href="/" className="logo">
+        <Image
+          src="/images/Vector-2.png"
+          alt="REVITAL Studio"
+          width={100}
+          height={100}
+        />
+      </Link>
+      <div className="call-action">
+        <button className="inquire">Inquire</button>
+        <button className="contact">Contact</button>
+      </div>
+    </section>
+  );
+};
 
 export default Navbar;

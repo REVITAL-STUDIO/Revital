@@ -1,0 +1,34 @@
+.menuSlider {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 75%;
+  width: 11%;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+  background: linear-gradient(to bottom, #ffffff8c, #c2c2c2 75%);
+  box-shadow: 4px;
+  z-index: 1;
+}
+
+.menu {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.menu ul {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  color: white;
+}
+
+.menu ul li {
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
