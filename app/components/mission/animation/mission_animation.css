@@ -1,7 +1,7 @@
 .mission-statement {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 260vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,17 +37,20 @@ svg {
 .driven p {
   margin-top: 4%;
   font-size: 1.2vw;
-  width: 65%;
+  width: 60%;
 }
 
 .work-grid {
-  position: sticky;
-  margin-top: 65vh; /* Adjusts how sticky positioning behaves */
+  margin-top: 0vh;
   width: 100%;
-  padding: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .grid-container {
+  position: sticky;
+  width: 80%;
   display: grid;
   grid-gap: 10px;
   grid-template-rows: auto;
@@ -55,7 +58,7 @@ svg {
 }
 
 .grid {
-  padding: 10rem;
+  padding: 8rem;
   background: #2b2b2b;
   border-radius: 10px;
   box-shadow: 0px 4px 25px 14px #fefaed;
@@ -65,12 +68,31 @@ svg {
 
 .a {
   grid-column: span 1;
+  transform-origin: left top; /* Scale from the top-left corner */
 }
 
 .b {
   grid-column: span 2;
+  transform-origin: right top; /* Scale from the top-left corner */
 }
 
 .c {
   grid-column: span 2;
+  transform-origin: left; /* Scale from the top-left corner */
+}
+
+.d {
+  transform-origin: right; /* Scale from the top-left corner */
+}
+
+.e {
+  transform-origin: bottom left;
+}
+
+.f {
+  transform-origin: bottom center;
+}
+
+.g {
+  transform-origin: bottom right;
 }

@@ -10,6 +10,17 @@ gsap.registerPlugin(ScrollTrigger);
 const MissionAnimation = () => {
   const svgRef = useRef<SVGSVGElement | null>(null);
   const gridWork = useRef(null);
+  const scalePhoto = useRef<(HTMLDivElement | null)[]>([]);
+
+  const images = [
+    "/images/work-4.jpg",
+    "/images/work-6.jpg",
+    "/images/work-1.jpg",
+    "/images/work-5.jpg",
+    "/images/work-3.jpg",
+    "/images/work-2.jpg",
+    "/images/work-7.jpg",
+  ];
 
   useLayoutEffect(() => {
     const svg = svgRef.current;
@@ -39,15 +50,33 @@ const MissionAnimation = () => {
     let gridEffect = gsap.context(() => {
       const timeline = gsap.timeline({
         scrollTrigger: {
-          trigger: ".grid-container",
-          start: "top",
-          end: "+=800px",
+          trigger: gridWork.current,
+          start: "-=75",
+          end: "+=450px",
           markers: true,
           scrub: true,
+          pin: true,
         },
       });
-    });
-  });
+
+      // Animate the grid work
+      timeline.from(gridWork.current, {
+        scale: 0.8,
+        duration: 1,
+      });
+
+      // Animate each photo
+      scalePhoto.current.forEach((photo, index) => {
+        timeline.to(photo, {
+          scale: 1.4,
+          duration: 3,
+          zIndex: 10,
+        });
+      });
+    }, gridWork);
+
+    return () => gridEffect.revert();
+  }, []);
 
   return (
     <div className="mission-statement">
@@ -81,7 +110,7 @@ const MissionAnimation = () => {
           </defs>
         </svg>
       </div>
-      <div className="driven">
+      <div data-scroll data-scroll-speed="0.05" className="driven">
         <h1>Driven and Collaborative</h1>
         <p>
           We empower individuals with the knowledge and tools necessary to
@@ -89,29 +118,17 @@ const MissionAnimation = () => {
           ecosystem of innovative and sustainable businesses.
         </p>
       </div>
-      <div className="work-grid">
-        <div ref={gridWork} className="grid-container">
-          <div className="grid a">
-            <Image src="/images/work-4.jpg" alt="" fill />
-          </div>
-          <div className="grid b">
-            <Image src="/images/work-6.jpg" alt="" fill />
-          </div>
-          <div className="grid c">
-            <Image src="/images/work-1.jpg" alt="" fill />
-          </div>
-          <div className="grid d">
-            <Image src="/images/work-5.jpg" alt="" fill />
-          </div>
-          <div className="grid e">
-            <Image src="/images/work-3.jpg" alt="" fill />
-          </div>
-          <div className="grid f">
-            <Image src="/images/work-2.jpg" alt="" fill />
-          </div>
-          <div className="grid g">
-            <Image src="/images/work-7.jpg" alt="" fill />
-          </div>
+      <div ref={gridWork} className="work-grid">
+        <div className="grid-container">
+          {images.map((src, index) => (
+            <div
+              key={index}
+              ref={(el) => (scalePhoto.current[index] = el)} // Assign each div to the array
+              className={`grid ${String.fromCharCode(97 + index)}`} // a, b, c, etc.
+            >
+              <Image src={src} alt={`Work image ${index + 1}`} fill />
+            </div>
+          ))}
         </div>
       </div>
     </div>
