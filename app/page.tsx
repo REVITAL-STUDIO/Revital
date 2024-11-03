@@ -3,9 +3,9 @@ import Image from "next/image";
 import "./globals.css";
 import Navbar from "./components/navbar/Navbar";
 
-import Statement from "./components/slideshows/slideshows/Statement";
+import Statement from "./components/hero/Statement";
 import { useEffect } from "react";
-import MenuSlider from "./components/slideshows/menuSlider/menuSlider";
+import MenuSlider from "./components/menuSlider/menuSlider";
 import MissionStatement from "./components/mission/statement/MissionStatement";
 import MissionAnimation from "./components/mission/animation/MissionAnimation";
 export default function Home() {

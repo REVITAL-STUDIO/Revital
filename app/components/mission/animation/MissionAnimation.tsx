@@ -3,13 +3,15 @@ import "./mission_animation.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useEffect, useLayoutEffect, useRef } from "react";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const MissionAnimation = () => {
   const svgRef = useRef<SVGSVGElement | null>(null);
+  const gridWork = useRef(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const svg = svgRef.current;
     const path = svg?.querySelector("path");
 
@@ -33,6 +35,20 @@ const MissionAnimation = () => {
     }
   }, []);
 
+  useLayoutEffect(() => {
+    let gridEffect = gsap.context(() => {
+      const timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".grid-container",
+          start: "top",
+          end: "+=800px",
+          markers: true,
+          scrub: true,
+        },
+      });
+    });
+  });
+
   return (
     <div className="mission-statement">
       <div className="svg-container ">
@@ -47,7 +63,7 @@ const MissionAnimation = () => {
           <path
             d="M0 0C494.499 55.3656 1426.97 277.21 1200.88 721.662C918.259 1277.23 -1306.48 1793.97 1746 2522"
             stroke="url(#paint0_linear_1676_113)"
-            strokeWidth="35"
+            strokeWidth="50"
             strokeLinecap="round"
           />
           <defs>
@@ -74,7 +90,29 @@ const MissionAnimation = () => {
         </p>
       </div>
       <div className="work-grid">
-        
+        <div ref={gridWork} className="grid-container">
+          <div className="grid a">
+            <Image src="/images/work-4.jpg" alt="" fill />
+          </div>
+          <div className="grid b">
+            <Image src="/images/work-6.jpg" alt="" fill />
+          </div>
+          <div className="grid c">
+            <Image src="/images/work-1.jpg" alt="" fill />
+          </div>
+          <div className="grid d">
+            <Image src="/images/work-5.jpg" alt="" fill />
+          </div>
+          <div className="grid e">
+            <Image src="/images/work-3.jpg" alt="" fill />
+          </div>
+          <div className="grid f">
+            <Image src="/images/work-2.jpg" alt="" fill />
+          </div>
+          <div className="grid g">
+            <Image src="/images/work-7.jpg" alt="" fill />
+          </div>
+        </div>
       </div>
     </div>
   );
