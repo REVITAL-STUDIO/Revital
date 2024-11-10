@@ -51,10 +51,9 @@ const MissionAnimation = () => {
       const timeline = gsap.timeline({
         scrollTrigger: {
           trigger: gridWork.current,
-          start: "-=75",
-          end: "+=450px",
-          markers: true,
-          scrub: true,
+          start: "-=50px",
+          end: "+=500px",
+          scrub: 1,
           pin: true,
         },
       });
@@ -62,15 +61,18 @@ const MissionAnimation = () => {
       // Animate the grid work
       timeline.from(gridWork.current, {
         scale: 0.8,
-        duration: 1,
+        duration: 2,
+        ease: "sine.in", // More dramatic easing
       });
 
       // Animate each photo
-      scalePhoto.current.forEach((photo, index) => {
+      scalePhoto.current.forEach((photo) => {
         timeline.to(photo, {
-          scale: 1.4,
-          duration: 3,
+          scale: 1.2,
+          duration: 2,
           zIndex: 10,
+          ease: "sine.in", // More dramatic easing
+          stagger: 0.2, // Adds delay between each photo's animation
         });
       });
     }, gridWork);
@@ -113,9 +115,12 @@ const MissionAnimation = () => {
       <div data-scroll data-scroll-speed="0.05" className="driven">
         <h1>Driven and Collaborative</h1>
         <p>
-          We empower individuals with the knowledge and tools necessary to
-          thrive in their respective industries, we aim to create a thriving
-          ecosystem of innovative and sustainable businesses.
+          REVITAL specialize in large-scale development projects, including
+          custom software and web applications, tailored for startups,
+          entrepreneurs, and creative professionals aiming to scale their
+          ventures. Our approach not only emphasizes functional and aesthetic
+          interfaces but also focuses on fostering community engagement through
+          dynamic media campaigns, event launches, and interactive platforms.
         </p>
       </div>
       <div ref={gridWork} className="work-grid">

@@ -1,0 +1,51 @@
+.services {
+  height: 150vh;
+  width: 100%;
+  position: relative;
+  margin-top: 75vh;
+  padding: 10rem;
+  overflow: hidden;
+}
+
+.services h1 {
+  font-size: 7vw;
+  font-weight: 200;
+  line-height: 100px;
+}
+
+.services p {
+  margin-top: 2%;
+  font-size: 1vw;
+  width: 75%;
+}
+
+.serviceName {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-top: 25vh;
+}
+
+.service-list {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  z-index: 30;
+}
+
+.service-list li {
+  font-size: 20px;
+  border-bottom: 1px solid;
+  margin-bottom: 10px; /* Adds space below each list item */
+  padding-bottom: 5px;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50% 50%;
+  margin-top: 50vh;
+  z-index: -1;
+  box-shadow: 0 2px 4px;
+}

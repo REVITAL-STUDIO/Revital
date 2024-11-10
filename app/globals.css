@@ -67,7 +67,7 @@
 
 body {
   margin: 0px;
-  background-color: #e9e0db;
+  background: linear-gradient(to bottom, #e9e0db, #fefaed);
 }
 
 h1 {

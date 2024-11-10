@@ -1,7 +1,7 @@
 .mission-statement {
   position: relative;
   width: 100%;
-  height: 260vh;
+  height: 200vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,23 +25,25 @@ svg {
 
 .driven {
   position: absolute;
-  top: 450px;
+  top: 50px;
   left: 180px;
 }
 
 .driven h1 {
-  font-size: 3vw;
-  line-height: 75px;
+  font-size: 7vw;
+  width: 50%;
+  font-weight: 200;
+  line-height: 100px;
 }
 
 .driven p {
   margin-top: 4%;
-  font-size: 1.2vw;
-  width: 60%;
+  font-size: 1vw;
+  width: 75%;
+  font-weight: 400;
 }
 
 .work-grid {
-  margin-top: 0vh;
   width: 100%;
   display: flex;
   align-items: center;
