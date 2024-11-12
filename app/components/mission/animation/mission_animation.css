@@ -15,6 +15,7 @@
   justify-content: center;
   width: 100%;
   height: 2522px;
+  overflow: hidden;
 }
 
 svg {
@@ -45,9 +46,12 @@ svg {
 
 .work-grid {
   width: 100%;
+  height: 100vh; /* Full height of the viewport */
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
+  transform: translate(0%, 0%); /* Offset to truly center the element */
+  overflow: hidden;
 }
 
 .grid-container {
@@ -60,8 +64,7 @@ svg {
 }
 
 .grid {
-  padding: 8rem;
-  background: #2b2b2b;
+  padding: 7.5rem;
   border-radius: 10px;
   box-shadow: 0px 4px 25px 14px #fefaed;
   position: relative;

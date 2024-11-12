@@ -30,13 +30,13 @@ const Services = () => {
         dot.style.left = `${x}px`;
         dot.style.position = "absolute";
         dot.style.transition = `${rand(100) + 900}ms`;
-        dot.style.opacity = "0.5";
+        dot.style.opacity = "0.35";
 
         dot.style.background = `radial-gradient(circle, rgba(${rand(
           255
         )}, ${rand(255)}, ${rand(255)}, ${Math.random() + 0.5}) 0%, rgba(${rand(
-        255
-        )}, ${rand(255)}, ${rand(255)}, ${Math.random() + 0.5}) 50%)`;
+          255
+        )}, ${rand(255)}, ${rand(255)}, 0) 75%)`;
       });
     }
   };
@@ -54,9 +54,11 @@ const Services = () => {
 
   return (
     <section ref={containerRef} className="services">
-      <div data-scroll data-scroll-speed="0.3" className="tomorrow">
-        <h1>Developing Your Tomorrow</h1>
-        <p>
+      <div className="tomorrow">
+        <h1 data-scroll data-scroll-speed="0.1">
+          Developing Your Tomorrow
+        </h1>
+        <p data-scroll data-scroll-speed="0.2">
           As a team of two professionals specializing in Development and Design,
           we build and support large-scale platforms tailored to meet your
           business needs.
@@ -71,6 +73,7 @@ const Services = () => {
             <li>Brand Identity</li>
           </ul>
         </div>
+        <button>Collaborate With US.</button>
       </div>
       <div className="circle"></div>
       <div className="circle"></div>

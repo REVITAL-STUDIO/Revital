@@ -9,6 +9,7 @@ import MenuSlider from "./components/menuSlider/menuSlider";
 import MissionStatement from "./components/mission/statement/MissionStatement";
 import MissionAnimation from "./components/mission/animation/MissionAnimation";
 import Services from "./components/services/Services";
+import Footer from "./components/footer/Footer";
 export default function Home() {
   useEffect(() => {
     (async () => {
@@ -24,6 +25,7 @@ export default function Home() {
       <MissionAnimation />
       <MissionStatement />
       <Services />
+      <Footer />
     </main>
   );
 }

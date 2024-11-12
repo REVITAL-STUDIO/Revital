@@ -51,8 +51,8 @@ const MissionAnimation = () => {
       const timeline = gsap.timeline({
         scrollTrigger: {
           trigger: gridWork.current,
-          start: "-=50px",
-          end: "+=500px",
+          start: "-=0px",
+          end: "+500px",
           scrub: 1,
           pin: true,
         },

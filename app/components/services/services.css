@@ -24,28 +24,39 @@
   display: flex;
   justify-content: end;
   align-items: center;
-  margin-top: 25vh;
+  margin-top: 10vh;
 }
 
 .service-list {
-  padding: 4rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   z-index: 30;
 }
 
 .service-list li {
-  font-size: 20px;
-  border-bottom: 1px solid;
-  margin-bottom: 10px; /* Adds space below each list item */
+  font-size: 26px;
+  margin-bottom: 5px; /* Adds space below each list item */
   padding-bottom: 5px;
+  font-style: italic;
 }
 
 .circle {
   position: absolute;
   border-radius: 50% 50%;
-  margin-top: 50vh;
+  height: 100%;
   z-index: -1;
-  box-shadow: 0 2px 4px;
+  margin-top: 20vh;
+}
+
+.tomorrow button {
+  margin-top: 5vh;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 4%;
+  font-size: 1rem;
+  font-family: "HK Grotesk", sans-serif;
+  border-radius: 100px;
+  background-color: #e9e0d4 ;
 }
